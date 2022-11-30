@@ -61,5 +61,5 @@ function getRandColor() {
     ranNum = Math.floor(ranNum);
     ranNum = ranNum.toString(16);
     let ranCol = ranNum.padStart(6,0);
-    return `#${ranCol.toUpperCase()}`
+    return `#${randColor.toUpperCase()}`
 }

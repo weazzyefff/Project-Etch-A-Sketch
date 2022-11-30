@@ -49,7 +49,7 @@ function getGrid(rows, columns) {
 
         //Change colour of cell while hovering over it
         cell.addEventListener('mouseover', (e) => {
-            e.target.style.backgroundColor = getRandColor();
+            e.target.style.backgroundColor = (getRandColor());
         });
     }
 }
@@ -57,9 +57,10 @@ function getGrid(rows, columns) {
 function getRandColor() {
     let maxVal = 0xFFFFFF; //16,777,215 (In hex)
     let ranNum = Math.random() * maxVal; //returns a floating point random number
+    alert(ranNum);
     //Convert the floating point number to an integer
     ranNum = Math.floor(ranNum);
     ranNum = ranNum.toString(16);
     let ranCol = ranNum.padStart(6,0);
-    return `#${ranCol.toUpperCase()}`
+    return `#${randColor.toUpperCase()}`
 }
