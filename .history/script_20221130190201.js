@@ -10,10 +10,8 @@ function getGrid(rows, columns) {
         let cell = document.createElement('div');
         cell.textContent = (c + 1);
         container.appendChild(cell).className = 'grid-item';
-
-        //Change colour of cell while hovering over it
         cell.addEventListener('mouseover', (e) => {
-            e.target.style.backgroundColor = ('blue');
+            e.target.css('background-colour: blue')
         });
     }
 }
