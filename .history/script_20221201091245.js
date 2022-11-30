@@ -28,13 +28,19 @@ btn.addEventListener('click', (e) => {
         let errTxt = document.createElement('div');
         errTxt.textContent = 'Error, please enter a number between 0-100';
         document.body.appendChild(errTxt).className = 'errText';
-
+        
     } else {
         let rows = numSquares;
         let columns = numSquares;
         getGrid(rows, columns);
     }
 });
+
+//Validate input
+/*function valInput(numSquares) {
+   
+  
+}*/
 
 //Create Grid
 function getGrid(rows, columns) {

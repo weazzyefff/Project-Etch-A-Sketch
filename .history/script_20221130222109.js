@@ -1,6 +1,3 @@
-//Global variables
-let numSquares = 0;
-
 //Select the container (from ID)
 const container = document.querySelector('#container');
 
@@ -15,26 +12,23 @@ document.body.appendChild(btn);
 
 btn.addEventListener('click', (e) => {
 
-    numSquares = prompt('How many rows and columns would you like?');
+    let numSquares = prompt('How many rows and columns would you like?');
 
-    if (isNaN(numSquares)) {
-        alert('Error, please enter a number');
-        let errTxt = document.createElement('div');
-        errTxt.textContent = 'Error, please enter a number';
-        document.body.appendChild(errTxt).className = 'errText';
-
-    } else if (numSquares >= 500) {
-        alert('Error, please enter a number between 0-100');
-        let errTxt = document.createElement('div');
-        errTxt.textContent = 'Error, please enter a number between 0-100';
-        document.body.appendChild(errTxt).className = 'errText';
-
+    /*if (!Number.isInteger(numSquares)) {
+        return ('Error, please enter a number.')
+    } else if (numSquares >= 100) {
+        return ('Error, please enter a number between 0-100')
     } else {
-        let rows = numSquares;
-        let columns = numSquares;
-        getGrid(rows, columns);
-    }
+        return 'numSquares = ' + numSquares;
+    }*/
+
 });
+
+
+
+let rows = numSquares;
+let columns = numSquares;
+getGrid();
 
 //Create Grid
 function getGrid(rows, columns) {

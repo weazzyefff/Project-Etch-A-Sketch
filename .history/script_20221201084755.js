@@ -17,24 +17,26 @@ btn.addEventListener('click', (e) => {
 
     numSquares = prompt('How many rows and columns would you like?');
 
-    if (isNaN(numSquares)) {
-        alert('Error, please enter a number');
+    if (!Number.isInteger(numSquares)) {
         let errTxt = document.createElement('div');
         errTxt.textContent = 'Error, please enter a number';
         document.body.appendChild(errTxt).className = 'errText';
-
     } else if (numSquares >= 500) {
-        alert('Error, please enter a number between 0-100');
         let errTxt = document.createElement('div');
         errTxt.textContent = 'Error, please enter a number between 0-100';
         document.body.appendChild(errTxt).className = 'errText';
-
     } else {
         let rows = numSquares;
         let columns = numSquares;
         getGrid(rows, columns);
     }
 });
+
+//Validate input
+/*function valInput(numSquares) {
+   
+  
+}*/
 
 //Create Grid
 function getGrid(rows, columns) {

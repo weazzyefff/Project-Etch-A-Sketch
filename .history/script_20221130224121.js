@@ -15,26 +15,25 @@ document.body.appendChild(btn);
 
 btn.addEventListener('click', (e) => {
 
-    numSquares = prompt('How many rows and columns would you like?');
 
-    if (isNaN(numSquares)) {
-        alert('Error, please enter a number');
-        let errTxt = document.createElement('div');
-        errTxt.textContent = 'Error, please enter a number';
-        document.body.appendChild(errTxt).className = 'errText';
+    /*if (!Number.isInteger(numSquares)) {
+    return ('Error, please enter a number.')
+} else if (numSquares >= 100) {
+    return ('Error, please enter a number between 0-100')
+} else {
+    return 'numSquares = ' + numSquares;
+}*/
 
-    } else if (numSquares >= 500) {
-        alert('Error, please enter a number between 0-100');
-        let errTxt = document.createElement('div');
-        errTxt.textContent = 'Error, please enter a number between 0-100';
-        document.body.appendChild(errTxt).className = 'errText';
+ numSquares = prompt('How many rows and columns would you like?');
+    let rows = numSquares;
+    let columns = numSquares;
+    getGrid(rows, columns);
+    console.log('numSquares = ' + numSquares)
 
-    } else {
-        let rows = numSquares;
-        let columns = numSquares;
-        getGrid(rows, columns);
-    }
+
 });
+
+
 
 //Create Grid
 function getGrid(rows, columns) {
