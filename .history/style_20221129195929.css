@@ -1,0 +1,9 @@
+#grid {
+    display: grid
+}
+
+
+.cell {
+    border: 1px solid #c2ba3c;
+    background: #f8ffde;
+  }

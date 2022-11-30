@@ -1,0 +1,11 @@
+#grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+}
+
+
+.cell {
+    border: 1px solid #9ba6a8;
+    background: #dfdfdf;
+  }
